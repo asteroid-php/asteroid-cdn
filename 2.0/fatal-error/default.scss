@@ -1,0 +1,53 @@
+html, body {
+	background: lightgray;
+}
+
+* {
+	font-family: "HelveticaNeue-Light", helvetica, arial;
+	font-weight: normal;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px none;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.wrapper {
+	width: calc(100% - 40px);
+	max-width: 460px;
+	margin: 50px auto 150px;
+	box-shadow: 0px 0px 20px #000000;
+}
+
+.main, .details {
+	padding: 20px;
+	background: #ffffff;
+}
+
+.main {
+	margin-top: 0px;
+	border-bottom: lightgray 1px solid;
+	
+	> h2:first-child {
+		margin: -20px -20px 20px;
+		padding: 20px;
+		background: rgb(180, 0, 0);
+		color: #ffffff;
+	}
+}
+
+summary {
+	cursor: pointer;
+}
+
+pre {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+li {
+	margin-left: 30px;
+}

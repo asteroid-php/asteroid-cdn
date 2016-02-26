@@ -1,0 +1,23 @@
+.nav-btn-group {
+	margin-left: 15px;
+	margin-right: 15px;
+	vertical-align: middle;
+	
+	.navbar-nav > & {
+		height: 50px;
+	}
+	
+	.navbar-nav > & > * {
+		display: inline-block;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		&.btn-sm, &.btn-group-sm {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		&.btn-lg, &.btn-group-lg {
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+	}
+}

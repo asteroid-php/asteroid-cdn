@@ -1,0 +1,16 @@
+iframe {
+	width: 100%;
+	border: 0px none;
+	background: transparent;
+	
+	.modal-content > & {
+		margin-bottom: -5px;
+		border-radius: 6px;
+		min-height: 400px;
+		overflow-x: hidden;
+	}
+	
+	&[seamless] { 
+	    display: block;
+	}
+}

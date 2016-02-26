@@ -1,0 +1,119 @@
+// Bootstrap
+$icon-font-path: "../../bootstrap-sass/3.3/assets/fonts/bootstrap/";
+@import "../../bootstrap-sass/3.3/assets/stylesheets/bootstrap";
+@import "../../bootstrap-sass/3.3/assets/stylesheets/bootstrap/theme";
+@import "../scss/file-input";
+@import "../scss/frames";
+@import "../scss/nav-buttons";
+
+/* body::after {
+	@extend .container;
+	font-family: "Glyphicons Halflings", $font-family-sans-serif;
+	content: "\e119\a\aScrolling space";
+	display: block;
+	height: 500px;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	white-space: pre;
+} */
+
+// Navbar
+.navbar-wrapper {
+	left: 0px;
+	right: 0px;
+	z-index: 1000;
+	max-height: 100%;
+	@media (max-width: 767px) {
+		overflow-y: auto;
+	}
+	> .container {
+		padding: 0px;
+	}
+}
+
+.navbar {
+	border-radius: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+}
+
+@media (min-width: 768px) {
+	.navbar-wrapper > .container {
+		padding: 0px 15px;
+	}
+	.navbar {
+		border-radius: 4px;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-left-width: 1px;
+		.navbar-wrapper.stickyfix-float & {
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+		}
+	}
+	.cover {
+		padding-top: 20px !important;
+	}
+}
+
+.navbar-brand > img {
+	height: 20px;
+}
+
+// Cover
+.cover {
+	@include gradient-vertical(#333333, #333333);
+	margin-bottom: 30px;
+	padding: 0px 0px 50px;
+	box-shadow: 0px 0px 10px #000000;
+	color: $gray-lighter;
+	text-align: center;
+	
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		
+	}
+	
+	.btn-lg {
+		padding: 10px 20px;
+		font-weight: bold;
+	}
+}
+
+// Messages
+.messages:empty {
+	display: none;
+}
+
+// Footer
+.footer {
+	margin-top: 30px;
+	background-color: $gray-lighter;
+	padding-top: 18px;
+	padding-bottom: 38px;
+}
+
+// Utilities
+.gray-darker { background-color: $gray-darker; }
+.gray-dark { background-color: $gray-dark; }
+.gray { background-color: $gray; }
+.gray-light { background-color: $gray-light; }
+.gray-lighter { background-color: $gray-lighter; }
+
+// Ajaxify
+.body {
+	transition: opacity 1s ease;
+	.loading & {
+		opacity: 0;
+	}
+}
+
+.ajax-progress {
+	body:not(.loading) & {
+		visibility: hidden;
+	}
+	.progress {
+		margin-bottom: 0px;
+	}
+}

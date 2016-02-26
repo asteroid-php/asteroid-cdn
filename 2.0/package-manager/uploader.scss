@@ -1,0 +1,21 @@
+// Bootstrap
+$icon-font-path: "../../bootstrap/3.3/assets/fonts/bootstrap/";
+@import "../../bootstrap-sass/3.3/assets/stylesheets/bootstrap";
+@import "../../bootstrap-sass/3.3/assets/stylesheets/bootstrap/theme";
+@import "../scss/file-input";
+
+html, body, .upload-modal {
+	min-height: 400px;
+}
+
+// Messages
+.messages:empty {
+	display: none;
+}
+
+.modal-body {
+	height: calc(100% - 120px);
+	height: 280px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}

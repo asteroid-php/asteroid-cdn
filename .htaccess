@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(.*)?\.(scss)$ scss.php?url=$1.$2
