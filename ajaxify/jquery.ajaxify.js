@@ -187,7 +187,7 @@
 					var $data = $(documentHtml(data));
 					
 					// Update content
-					$("[data-ajaxify]").each(function() {
+					$("[data-ajaxify]:not(script)").each(function() {
 						var $this = $(this),
 							id = $this.attr("data-ajaxify"),
 							$new = $data.find("[data-ajaxify]").filter(function() {
@@ -200,10 +200,11 @@
 						// Replace old element with the new element
 						$this.replaceWith($new.ajaxify());
 						$this = $new;
-						
-						// If this is javascript code, evaluate it
-						if($this.is("script"))
-							eval($this.html());
+					});
+					
+					// Evaluate javascript
+					$data.find("script[data-ajaxify]").each(function() {
+						eval($(this).html());
 					});
 					
 					// Update the title
