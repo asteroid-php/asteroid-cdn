@@ -202,6 +202,22 @@
 						$this = $new;
 					});
 					
+					// Add messages
+					var messages = typeof History.getState().data.messages == "object" ? History.getState().data.messages : [],
+						messages_str = "";
+					$.each(messages, function(id, message) {
+						if((typeof message.type == "string") && (typeof message.class != "string")) {
+							if(message.type == "neutral") message.class = "alert alert-info";
+							else if(message.type == "success") message.class = "alert alert-success";
+							else if(message.type == "error") message.class = "alert alert-danger";
+							else message.class = "alert alert-" + message.type;
+						}
+						
+						messages_str += "<p class=\"" + message.class + "\">" + message.html + "</p>";
+					});
+					
+					$(".messages").prepend(messages_str);
+					
 					// Evaluate javascript
 					$data.find("script[data-ajaxify]").each(function() {
 						eval($(this).html());
