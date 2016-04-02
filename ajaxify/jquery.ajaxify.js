@@ -112,7 +112,7 @@
 			});
 			
 			// Ajaxify Forms
-			$this.find("form:internal:not(.no-ajaxy):not([action^='#']):not([action^='javascript:']):not([onsubmit]):not([enctype])").click(function(event) {
+			$this.find("form:internal:not(.no-ajaxy):not([action^='#']):not([action^='javascript:']):not([onsubmit]):not([enctype])").submit(function(event) {
 				// Prepare
 				var $this = $(this),
 					url = $this.attr("data-action") || $this.attr("action"),

@@ -379,7 +379,7 @@ window.JSON||(window.JSON={}),function(){function f(a){return a<10?"0"+a:a}funct
 			});
 			
 			// Ajaxify Forms
-			$this.find("form:internal:not(.no-ajaxy):not([action^='#']):not([action^='javascript:']):not([onsubmit]):not([enctype])").click(function(event) {
+			$this.find("form:internal:not(.no-ajaxy):not([action^='#']):not([action^='javascript:']):not([onsubmit]):not([enctype])").submit(function(event) {
 				// Prepare
 				var $this = $(this),
 					url = $this.attr("data-action") || $this.attr("action"),
